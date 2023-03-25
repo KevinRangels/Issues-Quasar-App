@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import LoaderSpinner from 'src/shared/components/LoaderSpinner.vue';
 import FilterSelector from '../components/filter-selector/FilterSelector.vue';
+import IssueList from '../components/issue-list/IssueList.vue';
 
 
 </script>
@@ -20,7 +21,7 @@ import FilterSelector from '../components/filter-selector/FilterSelector.vue';
         <div class="col-xs-12 col-md-4">
             <!-- TODO: Loader -->
             <LoaderSpinner />
-            <!-- TODO: IssueList -->
+            <IssueList />
         </div>
     </div>
 </template>
