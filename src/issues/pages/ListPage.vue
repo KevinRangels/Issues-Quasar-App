@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import LoaderSpinner from 'src/shared/components/LoaderSpinner.vue';
 import FilterSelector from '../components/filter-selector/FilterSelector.vue';
+import FloatingButtons from '../components/FloatingButtons.vue';
 import IssueList from '../components/issue-list/IssueList.vue';
 import useIssues from '../composables/useIssues';
 
 const { issuesQuery } = useIssues()
+
+const lisPageClickTemp1 = () => {
+    console.log('lisPageClickTemp1');
+}
+const lisPageClickTemp2 = () => {
+    console.log('lisPageClickTemp2');
+}
 
 </script>
 
@@ -26,6 +34,22 @@ const { issuesQuery } = useIssues()
             <IssueList :issues="issuesQuery.data?.value || []" v-else/>
         </div>
     </div>
+
+    <!-- FloatingButtons -->
+    <FloatingButtons :buttons="[
+        {
+            icon: 'navigation',
+            color: 'secondary',
+            size: 'sm',
+            action: lisPageClickTemp2
+        },
+        {
+            icon: 'add',
+            color: 'primary',
+            size: 'lg',
+            action: lisPageClickTemp1
+        },
+    ]"/>
 </template>
 
 

@@ -19,7 +19,7 @@ const { prefetchIssue, setIssueCacheData } = useIssue( issue.value.number, {auto
 
 
 <template>
-  <q-card @mouseenter="setIssueCacheData(issue)" class="text-black col-12 q-mb-md" flat bordered></q-card>
+  <q-card @mouseenter="setIssueCacheData(issue)" class="text-black col-12 q-mb-md" flat bordered>
   <!-- <q-card @mouseenter="prefetchIssue(issue.number)" class="text-black col-12 q-mb-md" flat bordered> -->
     <q-item>
       <q-item-section avatar>
